@@ -6,7 +6,6 @@ const router = Router();
 const getItemById = async (req, res, next) => {
   const id = req.params.id;
   const data = await fetchFindById(id)
-	console.log(data?.filters);
   res.json({ author: res.author, item: data })
 }
 
